@@ -1,0 +1,4 @@
+if x >= 1 or y = 2 and not z <> 2 then
+  read x, y;
+  z := y;
+fi;

@@ -1,0 +1,6 @@
+while not x = 2 do
+  if not x > 2 then
+    write true;
+  fi;
+od;
+
