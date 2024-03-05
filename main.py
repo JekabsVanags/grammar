@@ -21,11 +21,11 @@ def parseFile(input, drawTree):
 
 def main(argv):
   #Change paramater to True to get the tree visualization
-  parseFile("/home/jekabsvanags/grammar/program1.txt", False)
-  parseFile("/home/jekabsvanags/grammar/program2.txt", False)
-  parseFile("/home/jekabsvanags/grammar/program3.txt", False)
-  parseFile("/home/jekabsvanags/grammar/program4.txt", False)
-  parseFile("/home/jekabsvanags/grammar/program5.txt", False)
+  parseFile("/home/jekabsvanags/grammar/program1.txt", True)
+  parseFile("/home/jekabsvanags/grammar/program2.txt", True)
+  parseFile("/home/jekabsvanags/grammar/program3.txt", True)
+  parseFile("/home/jekabsvanags/grammar/program4.txt", True)
+  parseFile("/home/jekabsvanags/grammar/program5.txt", True)
 
 if __name__ == '__main__':
   main(sys.argv)
