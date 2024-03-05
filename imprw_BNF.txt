@@ -1,0 +1,35 @@
+<progr> ::= <series>
+
+<series> ::= <stmt>; | <series>; <stmt>
+<stmt> ::= <input stmt> | <output stmt> | <assign stmt> | <cond stmt> | <loop> | <stmt> ; <stmt> | skip
+
+<input stmt> ::= read <varlist>
+<output stmt> ::= write <varlist>
+
+<assign stmt> ::= <var> := <expr>
+<cond stmt> ::= if <compar> then <series> fi | if <compar> then <series> else <series> fi
+
+<loop> ::= while <compar> do <series> od
+
+<compar> ::= <compar term> | <compar> or <compar term>
+<compar term> ::= <compar elem> | <compar term> and <compar elem>
+<compar elem> ::=  <expr><relation><expr> | <expr> | not <compar>
+
+<varlist> ::= <var> | <varlist>, <var>
+
+<expr> ::= <term> | <expr><weak oper><term>
+<term> ::= <elem>| <term><strong oper><elem>
+<elem> ::= <const> | <var> | true | false | (<expr>)
+
+<const> ::= <digit> | <const><digit>
+
+<var> ::= <letter> | <var><letter>    
+
+<relation> ::=   = | =< | < | > | >= | <>
+<weak oper> ::= + | - 		 
+<strong oper> ::= * | /  
+
+<digit> ::= 0 | 1 | ... | 9   		 
+<letter> ::= a | b | ... | z
+
+PIevienotā daļa ir viennozīmīga jo ar pievienotajiem izvedumiem nav iespējams izveidot vairākus izveduma kokus, jo bloki tiek pievienoti secīgi, nevis sadalās (a => ab => abc nevis a => abc)

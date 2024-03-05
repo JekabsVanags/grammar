@@ -134,15 +134,6 @@ class imprwListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by imprwParser#negelem.
-    def enterNegelem(self, ctx:imprwParser.NegelemContext):
-        pass
-
-    # Exit a parse tree produced by imprwParser#negelem.
-    def exitNegelem(self, ctx:imprwParser.NegelemContext):
-        pass
-
-
     # Enter a parse tree produced by imprwParser#elem.
     def enterElem(self, ctx:imprwParser.ElemContext):
         pass

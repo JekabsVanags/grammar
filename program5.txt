@@ -1,0 +1,4 @@
+if x = 33 then
+  x := 3 + (4 + 2) * 4;
+  write x;
+fi;

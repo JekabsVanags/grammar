@@ -32,9 +32,7 @@ varlist: VARNAME (',' VARNAME)*;
 
 expr: term | expr WEAKOP term;
 
-term: negelem | term STRONGOP negelem;
-
-negelem: elem; 
+term: elem | term STRONGOP elem;
 
 elem: VARNAME | NUMBER | TRUTHVAL | '(' expr ')';
 

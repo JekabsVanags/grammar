@@ -25,6 +25,7 @@ def main(argv):
   parseFile("/home/jekabsvanags/grammar/program2.txt", False)
   parseFile("/home/jekabsvanags/grammar/program3.txt", False)
   parseFile("/home/jekabsvanags/grammar/program4.txt", False)
+  parseFile("/home/jekabsvanags/grammar/program5.txt", True)
 
 if __name__ == '__main__':
   main(sys.argv)
