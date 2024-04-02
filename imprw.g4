@@ -2,7 +2,7 @@ grammar imprw;
 
 progr: series;
 
-series: stmt ';'  | series ';' stmt;
+series: stmt  | series ';' stmt;
 
 stmt: inputStmt
     | outputStmt
@@ -36,7 +36,7 @@ term: elem | term STRONGOP elem;
 
 elem: VARNAME | NUMBER | TRUTHVAL | '(' expr ')';
 
-NUMBER: [1-9][0-9]*;
+NUMBER: [0-9][0-9]*;
 
 VARNAME: [a-zA-Z_][a-zA-Z0-9_]*;
 

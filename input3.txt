@@ -1,0 +1,7 @@
+read x,y,z;
+if x = 1 and y = 2 and z = 3 then
+  skip
+else
+  write x
+fi;
+write z

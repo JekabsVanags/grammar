@@ -1,0 +1,7 @@
+read x, y;
+if x >= 1 or y = 2 then
+  z := 1
+  else
+  z := 0
+fi;
+write z
