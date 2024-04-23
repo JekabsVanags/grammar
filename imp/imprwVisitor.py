@@ -11,7 +11,7 @@ class imprwVisitor(ParseTreeVisitor):
 
     state = {}
 
-    with open('data.txt', 'r') as file:
+    with open('imp/data.txt', 'r') as file:
         input_values = file.readline().strip()
             
     input_values = input_values.split(',')
