@@ -8,6 +8,7 @@ from imprwParser import imprwParser
 from imprwVisitor import imprwVisitor
 from listenerInterp import ListenerInterp
 from imprwCompiler import imprwCompiler
+from imprwValidator import imprwValidator
 
 def parseFile(input, drawTree):
   input_stream = FileStream(input)
@@ -47,21 +48,33 @@ def compileFile(input):
   
   print(code)    
 
+def validateFile(input, fullCorrectness = False):
+  input_stream = FileStream(input)
+  lexer = imprwLexer(input_stream)
+  stream = CommonTokenStream(lexer)
+  parser = imprwParser(stream)
+  tree = parser.progr()
+  treeString = Trees.toStringTree(tree, None, parser)
+
+  visitor = imprwValidator()
+  code = visitor.visitProgr(tree, "p", "q", fullCorrectness)
 
 
 def main(argv):
   
   #Change paramater to True to get the tree visualization
-  # parseFile("/home/jekabsvanags/grammar/program1.txt", True)
-  # parseFile("/home/jekabsvanags/grammar/program2.txt", True)
-  # parseFile("/home/jekabsvanags/grammar/program3.txt", True)
-  # parseFile("/home/jekabsvanags/grammar/program4.txt", True)
-  # parseFile("/home/jekabsvanags/grammar/program5.txt", True)
-  #parseFile("/home/jekabsvanags/grammar/imp/input.txt", True)
+  # parseFile("/home/jekabsvanags/grammar/imp/program1.txt", True)
+  # parseFile("/home/jekabsvanags/grammar/imp/program2.txt", True)
 
   #Interpret file input.txt with data.txt
+  #interpretFile("/home/jekabsvanags/grammar/imp/input.txt")
+  
   #NOTES: while loops end with od and for loops with fi (no end). Also =< is <=. 
-  compileFile("/home/jekabsvanags/grammar/imp/input.txt")
+  #compileFile("/home/jekabsvanags/grammar/imp/input.txt")
+
+  #Change param fullCorrectness to generate approproiate verifications, change input.txt for program change/
+  validateFile("/home/jekabsvanags/grammar/imp/input.txt", True)
+  
 
 if __name__ == '__main__':
   main(sys.argv)

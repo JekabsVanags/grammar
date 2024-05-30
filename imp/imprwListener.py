@@ -80,6 +80,15 @@ class imprwListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by imprwParser#anotation.
+    def enterAnotation(self, ctx:imprwParser.AnotationContext):
+        pass
+
+    # Exit a parse tree produced by imprwParser#anotation.
+    def exitAnotation(self, ctx:imprwParser.AnotationContext):
+        pass
+
+
     # Enter a parse tree produced by imprwParser#compar.
     def enterCompar(self, ctx:imprwParser.ComparContext):
         pass

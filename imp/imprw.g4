@@ -20,7 +20,9 @@ assignStmt: VARNAME ':=' expr;
 
 condStmt: 'if' compar 'then' series ('else' series)? 'fi';
 
-loop: 'while' compar 'do' series 'od';
+loop: 'while' ('{' anotation '}')? compar 'do' series 'od';
+
+anotation: compar (',' expr)?; 
 
 compar: comparterm | compar 'or' comparterm;
 

@@ -1,5 +1,5 @@
 if x and y and z then
-  skip;
+  skip
 else
-  write x;
-fi;
+  write x
+fi
